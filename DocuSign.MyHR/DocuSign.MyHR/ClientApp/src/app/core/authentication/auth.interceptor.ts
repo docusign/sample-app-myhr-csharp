@@ -9,9 +9,10 @@ import { AuthenticationService } from './auth.service'
 export class AuthInterceptor implements HttpInterceptor {
     constructor(private router: Router, private authenticationService: AuthenticationService) {}
 
+    // eslint-disable-next-line
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request).pipe(
-            catchError((error: any) => {
+            catchError((error: unknown) => {
                 if (error instanceof HttpErrorResponse) {
                     const authType = this.authenticationService.getAuthType()
                     if (error.status !== 401) {

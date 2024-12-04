@@ -10,6 +10,7 @@ export class ActionsService {
 
     constructor(private http: HttpClient, @Inject('BASE_URL') private baseUrl: string) {}
 
+    /* eslint-disable @typescript-eslint/no-explicit-any */
     sendEnvelope(type: DocumentType, user: IUser): Observable<any> {
         const body: any = {
             Type: type,
@@ -41,4 +42,5 @@ export class ActionsService {
             }
         })
     }
+    /* eslint-enable @typescript-eslint/no-explicit-any */
 }

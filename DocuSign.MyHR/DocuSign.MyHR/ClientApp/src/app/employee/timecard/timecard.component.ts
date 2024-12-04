@@ -9,6 +9,7 @@ import { IUser } from '../shared/user.model'
 
 import { Router } from '@angular/router'
 
+// eslint-disable-next-line
 declare const window: Window & { docuSignClick: any }
 
 @Component({
@@ -70,7 +71,8 @@ export class TimeCardComponent implements OnInit {
             this.loadClickWrap(clickwrap, baseUrl)
         })
     }
-
+ 
+    // eslint-disable-next-line
     private showClickWrap(clickwrap: any, baseUrl: string) {
         window.docuSignClick.Clickwrap.render(
             {
@@ -101,6 +103,7 @@ export class TimeCardComponent implements OnInit {
         return `W${currentWeek} (${firstDay} - ${lastDay})`
     }
 
+    // eslint-disable-next-line
     private loadClickWrap(clickwrap: any, baseUrl: string): void {
         const existingScript = document.getElementById('clickwrapscript')
         if (existingScript) {

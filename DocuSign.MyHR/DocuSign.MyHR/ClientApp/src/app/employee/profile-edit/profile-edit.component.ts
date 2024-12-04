@@ -13,13 +13,14 @@ export class ProfileEditComponent implements OnInit {
     @Input() user: IUser
     @Output() canceled = new EventEmitter<void>()
     @Output() saved = new EventEmitter<IUser>()
+    // eslint-disable-next-line
     countries = [] as Array<any>
 
     constructor(private employeeService: EmployeeService, private notificationService: NotificationService) {}
 
     ngOnInit(): void {
         i18nIsoCountries.registerLocale(
-            // eslint-disable-next-line @typescript-eslint/no-var-requires
+            // eslint-disable-next-line
             require('i18n-iso-countries/langs/en.json')
         )
 
