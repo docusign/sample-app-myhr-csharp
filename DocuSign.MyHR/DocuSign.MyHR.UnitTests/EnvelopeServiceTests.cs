@@ -119,8 +119,8 @@ namespace DocuSign.MyHR.UnitTests
             UserDetails additionalUser)
         {
             //Arrange           
-            _userService.Setup(x => x.GetUserDetails(_accountId, _userId, LoginType.JWT)).Returns(userInformation);
-            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, null)).Returns(() =>
+            _userService.Setup(x => x.GetUserDetails(_accountId, _userId, _loginType)).Returns(userInformation);
+            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, new AccountsApi.GetAccountIdentityVerificationOptions())).Returns(() =>
                     new AccountIdentityVerificationResponse
                     {
                         IdentityVerification = new List<AccountIdentityVerificationWorkflow>
@@ -150,7 +150,7 @@ namespace DocuSign.MyHR.UnitTests
         {
             //Arrange  
             _userService.Setup(x => x.GetUserDetails(_accountId, _userId, _loginType)).Returns(userInformation);
-            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, null)).Returns(() =>
+            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, new AccountsApi.GetAccountIdentityVerificationOptions())).Returns(() =>
                     new AccountIdentityVerificationResponse
                     {
                         IdentityVerification = new List<AccountIdentityVerificationWorkflow>
@@ -179,8 +179,8 @@ namespace DocuSign.MyHR.UnitTests
             UserDetails additionalUser)
         {
             //Arrange
-            _userService.Setup(x => x.GetUserDetails(_accountId, _userId, LoginType.JWT)).Returns(userInformation);
-            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, null))
+            _userService.Setup(x => x.GetUserDetails(_accountId, _userId, _loginType)).Returns(userInformation);
+            _accountsApi.Setup(x => x.GetAccountIdentityVerification(_accountId, new AccountsApi.GetAccountIdentityVerificationOptions()))
                 .Returns(() =>
                     new AccountIdentityVerificationResponse
                     {
