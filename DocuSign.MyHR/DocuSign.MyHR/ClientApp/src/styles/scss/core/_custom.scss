@@ -1,0 +1,247 @@
+// Variables
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+$white:    #fff !default;
+$gray-100: #FDFDFD;
+$gray-200: #F6F6F7;
+$gray-300: #f0f0f0;
+$gray-400: #E9E9E9;
+$gray-500: #76717E;
+$gray-600: #D7D7D7;
+$gray-700: #E7E7E7;
+$gray-800: #3C3C3D;
+$gray-900: #24202A;
+$black:    #000 !default;
+
+$grays: () !default;
+
+$grays: map-merge(
+                (
+                        "100": $gray-100,
+                        "200": $gray-200,
+                        "300": $gray-300,
+                        "400": $gray-400,
+                        "500": $gray-500,
+                        "600": $gray-600,
+                        "700": $gray-700,
+                        "800": $gray-800,
+                        "900": $gray-900
+                ),
+                $grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #E50000;
+$orange: #FF7B1F;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+$colors: () !default;
+
+$colors: map-merge(
+                (
+                        "blue":       $blue,
+                        "indigo":     $indigo,
+                        "purple":     $purple,
+                        "pink":       $pink,
+                        "red":        $red,
+                        "orange":     $orange,
+                        "yellow":     $yellow,
+                        "green":      $green,
+                        "teal":       $teal,
+                        "cyan":       $cyan,
+                        "white":      $white,
+                        "gray":       $gray-600,
+                        "gray-dark":  $gray-800
+                ),
+                $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $white;
+$success:       $gray-400;
+$info:          $cyan !default;
+$warning:       $orange;
+$danger:        $red;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+                (
+                        "primary":    $primary,
+                        "secondary":  $secondary,
+                        "success":    $success,
+                        "info":       $info,
+                        "warning":    $warning,
+                        "danger":     $danger,
+                        "light":      $light,
+                        "dark":       $dark
+                ),
+                $theme-colors
+);
+
+// Body
+// Settings for the `<body>` element.
+$body-bg:                  $gray-200;
+$body-color:               $gray-900;
+
+// Links
+// Style anchor elements.
+$link-color:                              $gray-500;
+
+// Grid breakpoints
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1024px,
+        xxl:1200px
+);
+
+$font-family-base:            $nunito;
+
+$font-size-base:              0.875rem;//14px
+$font-size-lg:                $font-size-base;
+$font-size-sm:                $font-size-base;
+
+$font-weight-bold:            700;
+$font-weight-bolder:          800;
+
+$line-height-base:            1.429;//20px
+
+$h1-font-size:                32px;
+$h2-font-size:                32px;
+$h3-font-size:                24px;
+$h4-font-size:                24px;
+$h5-font-size:                18px;
+$h6-font-size:                18px;
+
+$headings-font-family:        $nunito;
+$headings-font-weight:        $font-weight-bolder;
+
+$hr-border-color:             #979797;
+
+$hr-margin-y:                 33px;
+
+// Buttons + Forms
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$input-btn-font-family:       $nunito;
+$input-btn-font-size:         18px;
+
+// Buttons
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-padding-y:              11px;
+$btn-padding-x:               18px;
+
+$btn-font-size:               10px;
+$btn-line-height:             14px;
+
+$btn-padding-y-sm:           2px;
+$btn-padding-x-sm:            18px;
+$btn-font-size-sm:            16px;
+
+$btn-padding-y-lg:            17px;
+$btn-padding-x-lg:            15px;
+$btn-font-size-lg:            15;
+$btn-line-height-lg:          20px;
+
+$btn-border-width:            2px;
+
+$btn-font-weight:             $font-weight-600;
+$btn-box-shadow:              0 7px 42px -11px rgba(167,167,226,0.47);
+$btn-focus-width:             0;
+$btn-focus-box-shadow:        $btn-box-shadow;
+$btn-disabled-opacity:        1;
+$btn-active-box-shadow:       none;
+
+$btn-link-disabled-color:     $gray-600 !default;
+
+// Allows for customizing button radius independently from global border radius
+$btn-border-radius:           20px;
+$btn-border-radius-lg:        28px;
+$btn-border-radius-sm:        24px;
+
+// Forms
+$label-margin-bottom:                 7px;
+
+
+$input-bg:                              $gray-700;
+$input-disabled-bg:                     $gray-700;
+
+$input-color:                           $gray-800;
+$input-border-color:                    $gray-400;
+
+$input-box-shadow:                       0 3px 41px -11px rgba(221,221,245,0.21);;
+
+$input-border-radius:                   8px;
+
+$input-focus-border-color:             $gray-700;
+
+$input-focus-box-shadow:                $input-box-shadow;
+
+$input-placeholder-color:               $gray-800;
+
+$input-height:                          40px;
+
+$form-group-margin-bottom:              16px;
+
+// Form validation
+$form-feedback-margin-top:          0;
+
+// Navs
+$nav-link-padding-y:                1.429rem;
+$nav-link-padding-x:                1.429rem;
+
+// Navbar
+$navbar-nav-link-padding-x:         1.071rem;
+
+$navbar-brand-font-size:          20;
+
+$navbar-toggler-padding-y:          0;
+$navbar-toggler-padding-x:          0;
+;
+$navbar-toggler-border-radius:      0;
+
+$navbar-light-color:                $gray-900;
+$navbar-light-hover-color:          $gray-900;
+
+// Cards
+$card-spacer-y:                     0;
+$card-spacer-x:                     0;
+$card-border-width:                 0;
+$card-border-radius:                0;
+$card-border-color:                 rgba($black, .125) !default;
+$card-inner-border-radius:          0;
+$card-cap-bg:                       transparent;
+$card-bg:                           transparent;
+
+
+// Modals
+// Padding applied to the modal body
+$modal-inner-padding:               40px 20px 30px;
+
+$modal-title-line-height:           32px;
+
+$modal-content-border-width:        0;
+$modal-content-border-radius:       8px;
+$modal-content-box-shadow-xs:       $input-box-shadow;
+
+$modal-header-border-color:         transparent;
+$modal-footer-border-color:         $modal-header-border-color;
+
+$modal-header-padding-y:            45px 30px;
+$modal-header-padding-x:            45px 50px;
+

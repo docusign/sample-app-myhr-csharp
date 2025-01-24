@@ -1,0 +1,260 @@
+<div class="action-cards-section">
+    <h4 translate>EmployeeActions.Header</h4>
+    <div class="section-card">
+        <div class="card-header">
+            <div class="card-info">
+                <div class="card-icon">
+                    <img src="assets/img/icon-1.svg" alt="icon" />
+                </div>
+                <span class="card-description" translate>EmployeeActions.DirectDeposit.Title</span>
+            </div>
+            <div class="card-actions">
+                <button
+                    class="btn btn-warning btn-sm"
+                    (click)="sendEnvelope(documentType.DirectDeposit)"
+                    [class.disabled]="actionExecuted"
+                    translate
+                >
+                    EmployeeActions.DirectDeposit.UpdateButton
+                </button>
+                <button
+                    class="btn btn-link link-with-arrow collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1"
+                    aria-expanded="false"
+                    aria-controls="collapse-1"
+                    translate
+                >
+                    EmployeeActions.DirectDeposit.ViewInfoButton
+                </button>
+            </div>
+        </div>
+        <div class="card-content collapse" id="collapse-1" aria-labelledby="heading-1">
+            <div class="card-body">
+                <span class="card-body-title" translate>EmployeeActions.DirectDeposit.Description</span>
+                <ul [innerHTML]="'EmployeeActions.DirectDeposit.FunctionsList' | translate"></ul>
+                <div class="collapse-inset-wrapper">
+                    <button
+                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-inset-direct-deposit"
+                        aria-expanded="false"
+                        aria-controls="collapse-inset-direct-deposit"
+                        translate
+                    >
+                        EmployeeActions.DirectDeposit.BehindTheSceneButton
+                    </button>
+                    <div
+                        data-parent="#actions"
+                        class="collapse-inset-body collapse"
+                        id="collapse-inset-direct-deposit"
+                        aria-labelledby="heading-1"
+                        [innerHTML]="'EmployeeActions.DirectDeposit.CodeFlow' | translate"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-card">
+        <div class="card-header">
+            <div class="card-info">
+                <div class="card-icon">
+                    <img src="assets/img/icon-2.svg" alt="icon" />
+                </div>
+                <span class="card-description"  [innerHTML]="'EmployeeActions.W4TaxWithholding.Title' | translate"></span>
+            </div>
+            <div class="card-actions">
+                <button class="btn btn-warning btn-sm" (click)="sendEnvelope(documentType.W4)" [class.disabled]="actionExecuted" translate>
+                    EmployeeActions.W4TaxWithholding.SelectButton
+                </button>
+                <button
+                    class="btn btn-link link-with-arrow collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-2"
+                    aria-expanded="false"
+                    aria-controls="collapse-2"
+                    translate
+                >
+                    EmployeeActions.W4TaxWithholding.ViewInfoButton
+                </button>
+            </div>
+        </div>
+        <div class="card-content collapse" id="collapse-2" aria-labelledby="heading-2">
+            <div class="card-body">
+                <span class="card-body-title" translate>EmployeeActions.W4TaxWithholding.Description</span>
+                <ul [innerHTML]="'EmployeeActions.W4TaxWithholding.FunctionsList' | translate"></ul>
+                <div class="collapse-inset-wrapper">
+                    <button
+                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-inset-w4"
+                        aria-expanded="false"
+                        aria-controls="collapse-inset-w4"
+                        translate
+                    >
+                        EmployeeActions.W4TaxWithholding.BehindTheSceneButton
+                    </button>
+                    <div
+                        data-parent="#actions"
+                        class="collapse-inset-body collapse"
+                        id="collapse-inset-w4"
+                        aria-labelledby="heading-1"
+                        [innerHTML]="'EmployeeActions.W4TaxWithholding.CodeFlow' | translate"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-card">
+        <div class="card-header">
+            <div class="card-info">
+                <div class="card-icon">
+                    <img src="assets/img/icon-3.svg" alt="icon" />
+                </div>
+                <span class="card-description" translate>EmployeeActions.TimeCard.Title</span>
+            </div>
+            <div class="card-actions">
+                <button
+                    class="btn btn-warning btn-sm"
+                    data-bs-toggle="modal"
+                    data-bs-target="#timeCard"
+                    [class.disabled]="actionExecuted"
+                    (click)="sendTimeCard()"
+                    translate
+                >
+                    EmployeeActions.TimeCard.EnterButton
+                </button>
+                <button
+                    class="btn btn-link link-with-arrow collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-3"
+                    aria-expanded="false"
+                    aria-controls="collapse-3"
+                    translate
+                >
+                    EmployeeActions.TimeCard.ViewInfoButton
+                </button>
+            </div>
+        </div>
+        <div class="card-content collapse" id="collapse-3" aria-labelledby="heading-3">
+            <div class="card-body">
+                <span class="card-body-title" translate>EmployeeActions.TimeCard.Description</span>
+                <ul [innerHTML]="'EmployeeActions.TimeCard.FunctionsList' | translate"></ul>
+                <div class="collapse-inset-wrapper">
+                    <button
+                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-inset-timecard"
+                        aria-expanded="false"
+                        aria-controls="collapse-inset-timecard"
+                        translate
+                    >
+                        EmployeeActions.TimeCard.BehindTheSceneButton
+                    </button>
+                    <div
+                        data-parent="#actions"
+                        class="collapse-inset-body collapse"
+                        id="collapse-inset-timecard"
+                        aria-labelledby="heading-1"
+                        [innerHTML]="'EmployeeActions.TimeCard.CodeFlow' | translate"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-card">
+        <div class="card-header">
+            <div class="card-info">
+                <div class="card-icon">
+                    <img src="assets/img/icon-4.svg" alt="icon" />
+                </div>
+                <span class="card-description" translate>EmployeeActions.TuitionReimbursement.Title</span>
+            </div>
+            <div class="card-actions">
+                <button
+                    class="btn btn-warning btn-sm"
+                    (click)="sendEnvelope(documentType.TuitionRbt)"
+                    [class.disabled]="actionExecuted"
+                    translate
+                >
+                    EmployeeActions.TuitionReimbursement.ApplyButton
+                </button>
+                <button
+                    class="btn btn-link link-with-arrow collapsed"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-4"
+                    aria-expanded="false"
+                    aria-controls="collapse-4"
+                    translate
+                >
+                    EmployeeActions.TuitionReimbursement.ViewInfoButton
+                </button>
+            </div>
+        </div>
+        <div class="card-content collapse" id="collapse-4" aria-labelledby="heading-4">
+            <div class="card-body">
+                <span class="card-body-title" translate>EmployeeActions.TuitionReimbursement.Description</span>
+                <ul [innerHTML]="'EmployeeActions.TuitionReimbursement.FunctionsList' | translate"></ul>
+                <div class="collapse-inset-wrapper">
+                    <button
+                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapse-inset-tuition-rbt"
+                        aria-expanded="false"
+                        aria-controls="collapse-inset-tuition-rbt"
+                        translate
+                    >
+                        EmployeeActions.TuitionReimbursement.BehindTheSceneButton
+                    </button>
+                    <div
+                        data-parent="#actions"
+                        class="collapse-inset-body collapse"
+                        id="collapse-inset-tuition-rbt"
+                        aria-labelledby="heading-1"
+                        [innerHTML]="'EmployeeActions.TuitionReimbursement.CodeFlow' | translate"
+                    ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- template -->
+<ng-template #directDepositTemplate>
+    <ul>
+        <li translate>
+            Notifications.DirectDepositTemplate.PrimaryAccountNumber<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.PrimaryAccountNumber
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.PrimaryRoutingNumber<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.PrimaryRoutingNumber
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.PercentageAllocationFirstAccount<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.PercentageFirstAccount
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.SecondaryRoutingNumber<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.SecondaryRoutingNumber
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.SecondaryAccountNumber<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.SecondaryAccountNumber
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.PercentageAllocationSecondAccount<span class="modal-success-value" ng-bind="safe">{{
+                directDepositPayload.PercentageSecondAccount
+            }}</span>
+        </li>
+        <li translate>
+            Notifications.DirectDepositTemplate.Date<span class="modal-success-value" ng-bind="safe">{{ directDepositPayload['DateSigned'] }}</span>
+        </li>
+    </ul>
+</ng-template>
+<!-- end of template -->

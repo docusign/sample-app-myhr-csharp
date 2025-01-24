@@ -1,0 +1,132 @@
+<section class="container content-section">
+    <div class="img-holder timecard-absolute-image-one absolute-img">
+        <img src="assets/img/timecard-absolute-image-1.png" alt="dots" />
+    </div>
+    <div class="img-holder timecard-absolute-image-two absolute-img">
+        <img src="assets/img/timecard-absolute-image-2.png" alt="dots" />
+    </div>
+    <h2 class="page-title" translate>Timecard.Header</h2>
+    <div class="row">
+        <div class="col-lg-9">
+            <h4 translate [translateParams]="{ weekInfo: workWeekDates }">
+                Timecard.Description
+            </h4>
+            <div class="user-profile timecard">
+                <div class="editable">
+                    <div class="user-avatar">
+                        <div class="user-image">
+                            <img ng-bind="safe" src="{{ 'data:image/jpg;base64,' + user?.profileImage }}" alt="avatar" />
+                        </div>
+                        <div class="user-info">
+                            <span ng-bind="safe">{{ user?.firstName }}</span>
+                            <span ng-bind="safe">{{ user?.lastName }}</span>
+                        </div>
+                    </div>
+                    <form action="" class="timecard-form needs-validation" [class.was-validated]="timecardForm.invalid" novalidate [formGroup]="timecardForm" (ngSubmit)="timecardForm.valid && sendTimeCard()">
+                        <div class="timecard-inputs">
+                            <div class="form-group">
+                                <label for="Monday" translate>Timecard.Weekdays.Mon</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Monday"
+                                    placeholder=""
+                                    formControlName="Monday"
+                                    required
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="Tuesday" translate>Timecard.Weekdays.Tue</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Tuesday"
+                                    placeholder=""
+                                    formControlName="Tuesday"
+                                    required
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="Wednesday" translate>Timecard.Weekdays.Wed</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Wednesday"
+                                    placeholder=""
+                                    formControlName="Wednesday"
+                                    required
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="Thursday" translate>Timecard.Weekdays.Thu</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Thursday"
+                                    placeholder=""
+                                    formControlName="Thursday"
+                                    required
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="Friday" translate>Timecard.Weekdays.Fri</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Friday"
+                                    placeholder=""
+                                    formControlName="Friday"
+                                    required
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group weekend">
+                                <label for="Saturday" translate>Timecard.Weekdays.Sat</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Saturday"
+                                    placeholder=""
+                                    formControlName="Saturday"
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <div class="form-group weekend">
+                                <label for="Sunday" translate>Timecard.Weekdays.Sun</label>
+                                <input
+                                    type="number"
+                                    class="form-control"
+                                    id="Sunday"
+                                    placeholder=""
+                                    formControlName="Sunday"
+                                    (change)="updateWorkLogs()"
+                                />
+                            </div>
+                            <span class="timecard-feedback" translate>Timecard.ValidationMessage</span>
+                        </div>
+                        <div class="total-time text-md-right mt-4">
+                            <span class="total-time-title" translate>Timecard.Total</span>
+                            <span class="total-time-hours" translate [translateParams]="{ hours: total }">Timecard.Hours</span>
+                        </div>
+                        <hr />
+                        <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center">
+                            <div id="ds-clickwrap"></div>
+                            <button
+                                class="btn btn-warning"
+                                [disabled]="timecardForm.invalid || this.timecartSent"
+                                [class.disabled]="timecardForm.invalid || this.timecartSent"
+                                translate
+                            >
+                                Timecard.SubmitButton
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

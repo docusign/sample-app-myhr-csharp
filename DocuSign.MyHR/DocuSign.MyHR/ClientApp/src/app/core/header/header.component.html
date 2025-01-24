@@ -1,0 +1,35 @@
+<header class="header" [class.header-home]="isHomePage$ | async" role="banner">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-lg-end">
+            <a class="navbar-brand d-inline-flex align-items-center p-0" [routerLink]="['']" routerLinkActive="active" translate>
+                <span class="navbar-brand-image d-inline-block">
+                    <img src="assets/img/logo.svg" alt="" />
+                </span>
+                Title
+            </a>
+            <button
+                class="navbar-toggler collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Account/Logout" (click)="logout()" *ngIf="isAuthenticated$ | async" translate>Logout</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="https://github.com/docusign/sample-app-myhr-csharp"  target="blank" translate>GitHubSource</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>

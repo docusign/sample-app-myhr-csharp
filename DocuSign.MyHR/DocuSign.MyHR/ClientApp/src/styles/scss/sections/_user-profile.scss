@@ -1,0 +1,81 @@
+.user-profile {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: $light-box-shadow;
+    padding: 20px 20px 20px;
+    position: relative;
+    margin-bottom: 40px;
+    max-width: 745px;
+    @include media-breakpoint-up(lg) {
+        padding: 30px 25px 30px;
+        margin-bottom: 0;
+        min-height: 442px;
+    }
+
+    &.timecard {
+        @include media-breakpoint-up(lg) {
+            padding: 30px 25px 25px;
+            margin-bottom: 0;
+        }
+
+        .user-avatar {
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .edit {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        @include media-breakpoint-up(lg) {
+            right: 25px;
+            top: 30px;
+        }
+    }
+
+    .profile-row {
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 24px;
+        margin-bottom: 15px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 20px;
+        }
+
+        .profile-title {
+            color: #686868;
+            padding-right: 0;
+            margin-bottom: 5px;
+            @include media-breakpoint-up(lg) {
+                margin-bottom: 0;
+            }
+        }
+
+        .profile-description {
+            color: $gray-800;
+            font-weight: $font-weight-600;
+
+            span {
+                display: block;
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+    .editable {
+        .user-avatar {
+            .form-group {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+  .btn-sm {
+     &:not(:last-child) {
+       margin-right: 15px;
+     }
+   }
+}

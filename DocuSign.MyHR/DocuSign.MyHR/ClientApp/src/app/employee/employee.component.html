@@ -1,0 +1,18 @@
+<section class="container content-section" id="actions">
+    <h2 class="page-title" translate>
+        Employee.Header
+        <span class="sub-title" translate>Employee.Description</span>
+    </h2>
+    <div class="row">
+        <ng-container *ngIf="!isEditUser">
+            <app-profile (editUserClicked)="editUser()" [user]="user" class="col-lg-5"></app-profile>
+        </ng-container>
+        <ng-container *ngIf="isEditUser">
+            <app-profile-edit (canceled)="cancelEdit()" (saved)="exitSaving($event)" [user]="user" class="col-lg-5"></app-profile-edit>
+        </ng-container>
+        <app-employee-actions class="col-lg-7"></app-employee-actions>
+    </div>
+    <app-manager-actions></app-manager-actions>
+    <app-notification></app-notification>
+</section>
+

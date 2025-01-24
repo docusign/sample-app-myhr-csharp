@@ -1,0 +1,12 @@
+<div *ngIf="message$ | async as message" class="modal-success" [class.fade]="isClosed" >
+    <button type="button" class="modal-success-close" data-dismiss="modal" (click) = "close()" >&times;</button>
+    <div class="modal-success-title" ng-bind="safe">{{message.header | translate}}</div>
+    <div class="modal-success-content">
+        <ng-container *ngIf="withTemplate; else defaultNotificationTemplate">
+            <ng-container *ngTemplateOutlet="message.body"></ng-container>   
+        </ng-container>     
+    </div>
+    <ng-template #defaultNotificationTemplate>
+        <p>{{message.body | translate}}</p>
+    </ng-template>
+</div>

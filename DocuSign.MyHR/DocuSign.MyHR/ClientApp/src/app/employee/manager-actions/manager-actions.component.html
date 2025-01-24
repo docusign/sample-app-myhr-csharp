@@ -1,0 +1,205 @@
+<hr />
+<div class="multi-level-section">
+    <h4>
+        <button
+            class="link-with-arrow collapsed"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-5"
+            aria-expanded="false"
+            aria-controls="collapse-5"
+            translate
+        >
+            ManagerActions.Header
+        </button>
+    </h4>
+    <div class="card-content collapse" id="collapse-5" aria-labelledby="heading-5">
+        <div class="card-body">
+            <p translate>ManagerActions.Description</p>
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-6.svg" alt="icon" />
+                                </div>
+                                <span class="card-description" translate>ManagerActions.OfferLetter.Title</span>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn btn-warning btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-1"
+                                    (click)="setDocumentType(documentType.Offer)"
+                                    [class.disabled]="executingAction"
+                                    translate
+                                >
+                                    ManagerActions.OfferLetter.SendButton
+                                </button>
+                                <button
+                                    class="btn btn-link link-with-arrow collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-6"
+                                    aria-expanded="false"
+                                    aria-controls="collapse-6"
+                                    translate
+                                >
+                                    ManagerActions.OfferLetter.ViewInfoButton
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-6" aria-labelledby="heading-6">
+                            <div class="card-body">
+                                <span class="card-body-title" translate>
+                                    ManagerActions.OfferLetter.Description
+                                </span>
+                                <ul [innerHTML]="'ManagerActions.OfferLetter.FunctionsList' | translate"></ul>
+                                <div class="collapse-inset-wrapper">
+                                    <button
+                                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-inset-offer-letter"
+                                        aria-expanded="false"
+                                        aria-controls="collapse-inset-offer-letter"
+                                        translate
+                                    >
+                                        ManagerActions.OfferLetter.BehindTheSceneButton
+                                    </button>
+                                    <div
+                                        data-parent="#actions"
+                                        class="collapse-inset-body collapse"
+                                        id="collapse-inset-offer-letter"
+                                        aria-labelledby="heading-1"
+                                        [innerHTML]="'ManagerActions.OfferLetter.CodeFlow' | translate"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6">
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-7.svg" alt="icon" />
+                                </div>
+                                <span class="card-description" translate>ManagerActions.I9Request.Title</span>
+                            </div>
+                            <div class="card-actions">
+                                <button
+                                    class="btn btn-warning btn-sm"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#modal-1"
+                                    (click)="setDocumentType(documentType.I9)"
+                                    [class.disabled]="executingAction"
+                                    translate
+                                >
+                                    ManagerActions.I9Request.SendButton
+                                </button>
+                                <button
+                                    class="btn btn-link link-with-arrow collapsed"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapse-7"
+                                    aria-expanded="false"
+                                    aria-controls="collapse-7"
+                                    translate
+                                >
+                                    ManagerActions.I9Request.ViewInfoButton
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-7" aria-labelledby="heading-7">
+                            <div class="card-body">
+                                <span class="card-body-title" translate>
+                                    ManagerActions.I9Request.Description
+                                </span>
+                                <ul [innerHTML]="'ManagerActions.I9Request.FunctionsList' | translate"></ul>
+                                <div class="collapse-inset-wrapper">
+                                    <button
+                                        class="btn btn-link link-with-arrow link-with-arrow-orange collapsed"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapse-inset-i9"
+                                        aria-expanded="false"
+                                        aria-controls="collapse-inset-i9"
+                                        translate
+                                    >
+                                        ManagerActions.I9Request.BehindTheSceneButton
+                                    </button>
+                                    <div
+                                        data-parent="#actions"
+                                        class="collapse-inset-body collapse"
+                                        id="collapse-inset-i9"
+                                        aria-labelledby="heading-1"
+                                        [innerHTML]="'ManagerActions.I9Request.CodeFlow' | translate"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" #closeModalButton (click)="resetForm()">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="modal-body">
+                                <h4 class="modal-title" id="modalLabel-1" translate>
+                                    ManagerActions.Modal.Header
+                                </h4>
+                                <span class="modal-subtitle" [innerHTML]="'ManagerActions.Modal.Description' | translate"></span>
+
+                                <form
+                                    [formGroup]="additionalUserForm"
+                                    [class.was-validated]="additionalUserForm.invalid"
+                                    (ngSubmit)="sendEnvelope()"
+                                >
+                                    <div class="form-group">
+                                        <label for="fullname" translate>ManagerActions.Modal.NameField</label>
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            id="fullname"
+                                            placeholder=""
+                                            formControlName="Name"
+                                            [class.invalid]="isInvalid(additionalUserForm.get('Name'))"
+                                        />
+                                        <div *ngIf="isInvalid(additionalUserForm.get('Name'))" class="invalid-feedback" translate>
+                                            ManagerActions.Modal.ErrorText
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email" translate>ManagerActions.Modal.EmailField</label>
+                                        <input
+                                            type="email"
+                                            class="form-control"
+                                            id="email"
+                                            placeholder=""
+                                            formControlName="Email"
+                                            [class.invalid]="isInvalid(additionalUserForm.get('Email'))"
+                                        />
+                                        <div *ngIf="isInvalid(additionalUserForm.get('Email'))" class="invalid-feedback" translate>
+                                            ManagerActions.Modal.ErrorText
+                                        </div>
+                                    </div>
+                                    <div class="buttons-group d-flex flex-wrap justify-content-end pt-3">
+                                        <button
+                                            class="btn btn-warning btn-sm"
+                                            [class.disabled]="additionalUserForm.invalid ||executingAction"
+                                            [disabled]="additionalUserForm.invalid || executingAction"
+                                            translate
+                                        >
+                                            ManagerActions.Modal.SubmitButtom
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,162 @@
+{
+  "Title": "HR Sample App",
+  "Logout": "Log Out",
+  "GitHubSource": "GitHub Source",
+  "Copyright": "© 2025 Docusign Inc.",
+  "WelcomeHeader": "Welcome to the HR Sample App",
+  "WelcomeDescription": "Self-service Human Resources Portal",
+  "LoginWithDocuSignAccountButton": "Log in with your Docusign account",
+  "LoginWithTestAccountButton": "Log in with a test account",
+  "Note": "Note: This sample app is written in C#",
+  "VSExtentionLink": "Get the Visual Studio Extension",
+  "VSCodeExtentionLink": "Get the Visual Studio Code Extension",
+  "InfoHeader": {
+    "Part1": "Docusign:",
+    "Part2": "It’s time to agree better"
+  },
+  "InfoDescription": "Docusign helps organizations connect and automate how they prepare, sign, act on and manage agreements.",
+  "SandBoxButton": "Create developer account",
+  "LearnMoreButton": "Learn more",
+  "Employee": {
+    "Header": "Welcome to the HR Sample App",
+    "Description": "Self-service Human Resources Portal"
+  },
+  "Profile": {
+    "Header": "Your Account Detail",
+    "Details": {
+      "Id": "ID",
+      "Address": "Address",
+      "HireDate": "Hire Date"
+    },
+    "Edit": {
+      "FieldInvalid": "Please fill out this field.",
+      "FirstName": "First Name",
+      "LastName": "Last Name",
+      "Id": "ID",
+      "HireDate": "Hire Date",
+      "AddressLine": "Address Line",
+      "City": "City",
+      "State": "State/Province/Region",
+      "ZipCode": "Zip Code",
+      "Country": "Country",
+      "Cancel": "Cancel",
+      "Save": "Save",
+      "SuccessMessage": {
+        "Header": "Update user",
+        "Message": "User updated successfully!"
+      }
+    }
+  },
+  "Timecard": {
+    "Header": "Timecard",
+    "Description": "Fill in the hours worked each day for {{weekInfo}}",
+    "Weekdays": {
+      "Mon": "Mon",
+      "Tue": "Tue",
+      "Wed": "Wed",
+      "Thu": "Thu",
+      "Fri": "Fri",
+      "Sat": "Sat",
+      "Sun": "Sun"
+    },
+    "Total": "Total",
+    "Hours": "{{hours}} h",
+    "SubmitButton": "Submit time report",
+    "ValidationMessage": "Please fill out the form"
+  },
+  "ManagerActions": {
+    "Header": "Manager Actions",
+    "Description": "You can see this because you have admin permissions",
+    "OfferLetter": {
+      "Title": "A Candidate offer letter",
+      "Description": "This action demonstrates the following Docusign features:",
+      "FunctionsList": "<li>Embedded signing</li><li>Templates</li><li>Routing order</li>",
+      "SendButton": "Send",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/TemplateHandlers/OfferTemplateHandler.cs'>OfferTemplateHandler.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the button is selected, we ask the user to provide a name and email address for the candidate. The information will be used to fill in a placeholder recipient that is in the template. We then call the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' class='text-warning' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/create'>Templates:Create</a> method to create a new template with the required fields and documents and a single placeholder recipient. </p><span><b>Step 2</b></span><p>We proceed to create an envelope from the template by using the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, providing the logged-in user's email address and name for the recipient. </p><span><b>Step 3</b></span><p>We make an API call to the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient'>EnvelopeViews:createRecipient</a> method with a redirectUri back into the app. We redirect the browser to go to the URL that we get back from the aforementioned API call. At this point the manager, who is the first recipient (routing order 1), signs the document. Once the manager finishes signing the document, an email will be sent to the candidate for remote signing (routing order 2).</p>"
+    },
+    "I9Request": {
+      "Title": "An I-9 verification request",
+      "Description": "This action demonstrates the following Docusign features:",
+      "FunctionsList": "<li>Remote signing</li><li>Templates</li><li>IDV (recipient authentication)</li>",
+      "SendButton": "Send",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/TemplateHandlers/I9TemplateHandler.cs'>I9TemplateHandler.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the button is selected, we ask the user to provide a name and email address for the new employee. The information will be used to fill in a placeholder recipient that is in the template. We then call the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' class='text-warning' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/create'>Templates:Create</a> method to create a new template with the required fields and documents and a single placeholder recipient. </p><span><b>Step 2</b></span><p>We proceed to create an envelope from the template by using the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, providing the logged-in user's email address and name for the recipient. The envelope is created and immidiately sent out for remote signing by the single recipient. The recipient recieves an email that includes instructions for how to proceed with the IDV process and eventually sign the document.</p>"
+    },
+    "Modal": {
+      "Header": "Add recipient",
+      "Description": "Enter the name and email address<br />of the person you want to sign the document.",
+      "NameField": "Full name",
+      "EmailField": "Email",
+      "ErrorText": "Please fill out this field.",
+      "SubmitButtom": "Continue"
+    }
+  },
+  "EmployeeActions": {
+    "Header": "Employee Actions",
+    "DirectDeposit": {
+      "Title": "Direct deposit information",
+      "Description": "This action demonstrates the following Docusign features:",
+      "FunctionsList": "<li>Embedded signing</li><li>Templates</li><li>Formula fields</li><li>Tab validation</li>",
+      "UpdateButton": "Update",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/TemplateHandlers/DirectDepositTemplateHandler.cs'>DirectDepositTemplateHandler.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the button is selected, we call the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' class='text-warning' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/create'>Templates:Create</a> method to create a new template with the required fields and documents and a single placeholder recipient. </p><span><b>Step 2</b></span><p>We proceed to create an envelope from the template by using the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, providing the logged-in user's email address and name for the recipient. </p><span><b>Step 3</b></span><p>We make an API call to the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient'>EnvelopeViews:createRecipient</a> method with a redirectUri back into the app. We redirect the browser to go to the URL that we get back from the aforementioned API call.</p><span><b>Step 4</b></span><p>After signing is complete, we make another call to the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/get'>Envelopes:get</a> method to retrieve the information from the envelope."
+    },
+    "W4TaxWithholding": {
+      "Title": "W-4 tax withholding <span>Relevant for USA only</span>",
+      "Description": "This action demonstrates the following Docusign API functions:",
+      "FunctionsList": "<li>Embedded signing</li><li>Templates</li><li>Formula fields</li><li>Tab validation</li>",
+      "SelectButton": "Select",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/TemplateHandlers/W4TemplateHandler.cs'>W4TemplateHandler.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the button is selected, we call the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' class='text-warning' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/create'>Templates:Create</a> method to create a new template with the required fields and documents and a single placeholder recipient. </p><span><b>Step 2</b></span><p>We proceed to create an envelope from the template by using the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, providing the logged-in user's email address and name for the recipient. </p><span><b>Step 3</b></span><p>We make an API call to the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient'>EnvelopeViews:createRecipient</a> method with a redirectUri back into the app. We redirect the browser to go to the URL that we get back from the aforementioned API call.</p>"
+    },
+    "TimeCard": {
+      "Title": "Time card",
+      "Description": "This action demonstrates the following Docusign features:",
+      "FunctionsList": "<li>Create a custom elastic template</li><li>Activate an elastic template</li><li>Display a modal elastic template</li>",
+      "EnterButton": "Enter",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/ClickWrapService.cs'>ClickWrapService.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the form is submitted, we use the Click API to create an elastic template that is using a document that contains the hours worked this week.</p><span><b>Step 2</b></span><p> We then call another Click API endpoint to activate the newly created elastic template.</p><span><b>Step 3</b></span><p> Lastly, we embed the elastic template HTML and Javascript to the page and show it to the user so that they can consent to it.</p>"
+    },
+    "TuitionReimbursement": {
+      "Title": "Tuition reimbursement",
+      "Description": "This action demonstrates the following Docusign API functions:",
+      "FunctionsList": "<li>Embedded signing</li><li>Templates</li><li>Attachment tab</li><li>Tab validation</li>",
+      "ApplyButton": "Apply",
+      "ViewInfoButton": "View info",
+      "BehindTheSceneButton": "Behind the scenes",
+      "CodeFlow": "View source file <a target='_blank' rel='noopener noreferrer' href='https://github.com/docusign/sample-app-myhr-csharp/blob/master/DocuSign.MyHR/DocuSign.MyHR/Services/TemplateHandlers/TuitionReimbursementTemplateHandler.cs'>TuitionReimbursementTemplateHandler.cs</a> on GitHub.<br><br><h6>Code flow:</h6><span><b>Step 1</b></span><p>When the button is selected, we call the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/list'>Templates:list</a> method on the account to check if a template exists. If it does, we find the templateId; if not, we call the <a target='_blank' class='text-warning' href='https://developers.docusign.com/docs/esign-rest-api/reference/Templates/Templates/create'>Templates:Create</a> method to create a new template with the required fields and documents and a single placeholder recipient. </p><span><b>Step 2</b></span><p>We proceed to create an envelope from the template by using the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/Envelopes/create'>Envelopes:create</a> method, providing the logged-in user's email address and name for the recipient. </p><span><b>Step 3</b></span><p>We make an API call to the <a class='text-warning' target='_blank' href='https://developers.docusign.com/docs/esign-rest-api/reference/Envelopes/EnvelopeViews/createRecipient'>EnvelopeViews:createRecipient</a> method with a redirectUri back into the app. We redirect the browser to go to the URL that we get back from the aforementioned API call.</p>"
+    }
+  },
+  "Notifications":{
+    "SuccessMessageHeader":{
+      "DirectDeposit":"SUCCESS: UPDATE DIRECT DEPOSIT INFORMATION",
+      "W4":"SUCCESS: W-4 TAX WITHHOLDING SIGNED",
+      "Timecard":"SUCCESS: TIME CARD SENT",
+      "TuitionRbt":"SUCCESS: TUITION REIMBURSEMENT SIGNED",
+      "I9":"SUCCESS: I-9 VERIFICATION SENT",
+      "Offer":"SUCCESS: OFFER LETTER SENT"
+    },
+    "SuccessMessageBody":{
+      "W4":"Document was signed succesfully",
+      "Timecard":"Time card was sent succesfully",
+      "TuitionRbt":"Document was signed succesfully",
+      "I9":"Document was sent succesfully",
+      "Offer":"Offer letter was sent succesfully"
+    },
+    "DirectDepositTemplate":{
+      "PrimaryRoutingNumber":"Primary routing number:",
+      "PrimaryAccountNumber":"Primary account number:",
+      "PercentageAllocationFirstAccount":"Allocation percentage for first account:",
+      "SecondaryRoutingNumber":"Secondary routing number:",
+      "SecondaryAccountNumber":"Secondary account number:",
+      "PercentageAllocationSecondAccount":"Allocation percentage for second account:",
+      "Date":"Date:"
+    }
+  }
+}

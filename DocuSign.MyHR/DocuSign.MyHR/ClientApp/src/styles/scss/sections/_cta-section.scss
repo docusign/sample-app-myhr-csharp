@@ -1,0 +1,41 @@
+.cta-section {
+    color: $gray-500;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 19px;
+
+    .cta-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        justify-content: center;
+        @include media-breakpoint-up(md) {
+            justify-content: flex-start;
+        }
+    }
+
+    .cta-title {
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 16px;
+        color: $gray-900;
+        text-transform: uppercase;
+    }
+
+    .img-holder {
+        height: 28px;
+        width: 28px;
+        border-radius: 28px;
+        overflow: hidden;
+        background-color: #E1E1F6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

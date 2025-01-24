@@ -1,0 +1,44 @@
+<div>
+    <h4 translate>Profile.Header</h4>
+    <div class="user-profile">
+        <div class="static">
+            <div class="edit" *ngIf="user?.loginType == 0">
+                <button class="edit-icon" (click)="editProfile()">
+                    <img src="assets/img/edit.svg" alt="" />
+                </button>
+            </div>
+            <div class="user-avatar">
+                <div class="user-image" *ngIf="user?.profileImage">
+                    <img ng-bind="safe" src="{{ 'data:image/jpg;base64,' + user.profileImage }}" alt="avatar" />
+                </div>
+                <div class="user-info">
+                    <span ng-bind="safe">{{ user?.firstName }}</span>
+                    <span ng-bind="safe">{{ user?.lastName }}</span>
+                </div>
+            </div>
+            <div class="profile-row row">
+                <div class="profile-title col-lg-3" translate>Profile.Details.Id</div>
+                <div class="profile-description col-lg-9" ng-bind="safe">{{ user?.profileId }}</div>
+            </div>
+            <div class="profile-row row">
+                <div class="profile-title col-lg-3" translate>
+                    Profile.Details.HireDate
+                </div>
+                <div class="profile-description col-lg-9" ng-bind="safe">
+                    {{ user?.hireDate | date: 'shortDate' }}
+                </div>
+            </div>
+            <div class="profile-row row">
+                <div class="profile-title col-lg-3" translate>
+                    Profile.Details.Address
+                </div>
+                <div class="profile-description col-lg-9">
+                    <span ng-bind="safe">{{ user?.address?.address1 }}</span>
+                    <span ng-bind="safe"> {{getCityandState(user?.address?.city, user?.address?.stateOrProvince)}}</span>
+                    <span *ngIf="user?.address.postalCode != null" ng-bind="safe">{{ user?.address?.postalCode }}</span>
+                    <span ng-bind="safe">{{ user?.address?.country }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

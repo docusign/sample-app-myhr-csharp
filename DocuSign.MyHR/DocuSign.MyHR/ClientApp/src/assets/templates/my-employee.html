@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Docusign</title>
+    <meta name="description"
+          content="">
+    <meta name="keywords"
+          content="">
+    <link rel="stylesheet" href="../../styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" role="banner">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-lg-end">
+                <a class="navbar-brand d-inline-flex align-items-center p-0" href="#">
+                            <span class="navbar-brand-image d-inline-block">
+                                <img src="assets/img/logo.svg" alt="">
+                            </span>
+                    MyHR
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">GitHub Source
+                                <img class="icon" src="assets/img/arrow-right.svg" alt="arrow-right icon"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main role="main" class="content">
+        <section class="container content-section">
+            <h2 class="page-title">Welcome to MyHR<span class="sub-title">Self-service Human Resources Portal</span></h2>
+            <div class="row">
+                <div class="col-lg-5">
+                    <h4>Your Account Details</h4>
+                    <div class="user-profile">
+                        <div class="static">
+                            <div class="edit">
+                                <button class="edit-icon"><img src="assets/img/edit.svg" alt=""></button>
+                            </div>
+                            <div class="user-avatar">
+                                <div class="user-image">
+                                    <img src="assets/img/avatar.png" alt="avatar">
+                                </div>
+                                <div class="user-info">
+                                    <span>Kevin</span>
+                                    <span>Dukkonovsky </span>
+                                </div>
+                            </div>
+                            <div class="profile-row row">
+                                <div class="profile-title col-lg-3">ID</div>
+                                <div class="profile-description col-lg-9">122088</div>
+                            </div>
+                            <div class="profile-row row">
+                                <div class="profile-title col-lg-3">Hire Date</div>
+                                <div class="profile-description col-lg-9">03/04/20</div>
+                            </div>
+                            <div class="profile-row row">
+                                <div class="profile-title col-lg-3">Address</div>
+                                <div class="profile-description col-lg-9">
+                                    <span>123 Merry Lane NP00000000</span>
+                                    <span>East Hanover,</span>
+                                    <span>New Jersey, 07936</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="editable">
+                            <form action="" class="was-validated">
+                                <div class="user-avatar">
+                                    <div class="user-image">
+                                        <img src="assets/img/avatar.png" alt="avatar">
+                                    </div>
+                                    <div>
+                                        <div class="form-group">
+                                            <label for="uname">First Name</label>
+                                            <input type="text" class="form-control" id="uname" placeholder="" name="uname" required>
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="lname">Last Name</label>
+                                            <input type="text" class="form-control" id="lname" placeholder="" name="lname" required>
+                                            <div class="valid-feedback">Valid.</div>
+                                            <div class="invalid-feedback">Please fill out this field.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-row row">
+                                    <div class="col-lg-4">
+                                        <div class="row">
+                                            <div class="profile-title col-lg-2">ID</div>
+                                            <div class="profile-description col-lg-10">122088</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <div class="row">
+                                            <div class="profile-title col-lg-4">Hire Date</div>
+                                            <div class="profile-description col-lg-8">03/04/20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Address Line</label>
+                                    <input type="text" class="form-control" id="address" placeholder="" name="address" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <input type="text" class="form-control" id="city" placeholder="" name="city" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state">State/Province/Region</label>
+                                    <input type="text" class="form-control" id="state" placeholder="" name="state" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zipcode">ZIP Code</label>
+                                    <input type="number" class="form-control" id="zipcode" placeholder="" name="zipcode" required>
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Please fill out this field.</div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <select class="form-control" id="country">
+                                        <option value="">USA</option>
+                                        <option value="">USA</option>
+                                        <option value="">USA</option>
+                                    </select>
+                                </div>
+                                <div class="buttons-group d-flex flex-wrap justify-content-end mt-1">
+                                    <button class="btn btn-outline-warning btn-sm">Cancel</button>
+                                    <button class="btn btn-warning btn-sm">Save</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="accordion" class="action-cards-section col-lg-7">
+                    <h4>Employee Actions</h4>
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-1.svg" alt="icon">
+                                </div>
+                                <span class="card-description">Direct deposit information</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-warning btn-sm">Update</button>
+                                <button class="btn btn-link link-with-arrow collapsed " data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">View info</button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-1" aria-labelledby="heading-1" data-parent="#accordion">
+                            <div class="card-body">
+                                <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                <ul>
+                                    <li>Templates</li>
+                                    <li>Calculatd fields</li>
+                                    <li>etc.</li>
+                                </ul>
+                                <div class="collapse-inset-wrapper">
+                                    <button class="btn btn-link link-with-arrow link-with-arrow-orange collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-inset-1" aria-expanded="false" aria-controls="collapse-inset-1">
+                                        Behind the scene</button>
+                                    <div class="collapse-inset-body collapse" id="collapse-inset-1" aria-labelledby="heading-1">
+                                        <h6>Code flow:</h6>
+                                        <span><b>Step 1</b></span>
+                                        <p>When the form is submitted, we use the <code>Envelopes: create</code> method to send the signature request with the corresponding form information. The envelope we construct contains a <code>document</code> object, a recipient object of type <code>signer</code>, and tabs, which contain the form fields information. Since we are using embedded signing, we must also set the <code>clientUserId</code> property on the recipient.</p>
+                                        <p>We place the tabs on the document by specifying a <code>SignHereTab</code> element and a <code>PaymentTab</code> element as part of the <code>signer</code> element. The tab elements are positioned using <em>x/y</em> coordinates on the document.</p>
+                                        <p>The <code>PaymentTab</code> serves two purposes. It is used both to display the amount due in the document and to instruct Docusign to proceed to collect payments after the document is signed.</p>
+                                        <p>Lastly, we include the status \"sent\" in the request so that the envelope is sent for signing. The eSignature REST API request is sent to the following endpoint:</p>
+                                        <pre>POST /v2.1/accounts/{accountId}/envelopes</pre>
+                                        <span><b>Step 2</b></span>
+                                        <p>To enable embedded signing of the envelope inside our application, we next use the <code><span class='text-warning'>EnvelopeViews</span>: createRecipient</code> method to generate a signing URL for the recipient. For this to work, the <code>clientUserId</code> property must be set on the recipient when the envelope is sent during step 1 above.</p>
+                                        <p>Once the envelope is sent, we save the envelope ID and recipient information to our session. Then, we retrieve the envelope ID and recipient info from our session and create the recipient view by generating the URL and displaying the recipient view in a full-width and full-height iframe inside our page.</p>
+                                        <p>To create the recipient view of the envelope, we send an API request to:</p>
+                                        <pre>POST /v2.1/accounts/{accountId}/envelopes/{envelopeId}/views/recipient</pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-2.svg" alt="icon">
+                                </div>
+                                <span class="card-description">W-4 tax withholding</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-warning btn-sm disabled">Select</button>
+                                <button class="btn btn-link link-with-arrow collapsed disabled" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">View info</button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-2" aria-labelledby="heading-2" data-parent="#accordion">
+                            <div class="card-body">
+                                <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                <ul>
+                                    <li>Templates1111</li>
+                                    <li>Calculatd fields</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-3.svg" alt="icon">
+                                </div>
+                                <span class="card-description">Time card</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-warning btn-sm">Enter</button>
+                                <button class="btn btn-link link-with-arrow collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">View info</button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-3" aria-labelledby="heading-3" data-parent="#accordion">
+                            <div class="card-body">
+                                <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                <ul>
+                                    <li>Templates1111</li>
+                                    <li>Calculatd fields</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-card">
+                        <div class="card-header">
+                            <div class="card-info">
+                                <div class="card-icon">
+                                    <img src="assets/img/icon-4.svg" alt="icon">
+                                </div>
+                                <span class="card-description">Tuition reimbursement</span>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-warning btn-sm">Apply</button>
+                                <button class="btn btn-link link-with-arrow collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">View info</button>
+                            </div>
+                        </div>
+                        <div class="card-content collapse" id="collapse-4" aria-labelledby="heading-4" data-parent="#accordion">
+                            <div class="card-body">
+                                <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                <ul>
+                                    <li>Templates1111</li>
+                                    <li>Calculatd fields</li>
+                                    <li>etc.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="multi-level-section">
+                <h4>
+                    <button class="link-with-arrow collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">Manager Actions</button>
+                </h4>
+                <div class="card-content collapse" id="collapse-5" aria-labelledby="heading-5">
+                    <div class="card-body">
+                        <p>You can see this because you have admin premissions</p>
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="section-card">
+                                    <div class="card-header">
+                                        <div class="card-info">
+                                            <div class="card-icon">
+                                                <img src="assets/img/icon-6.svg" alt="icon">
+                                            </div>
+                                            <span class="card-description">Candidate offer letter</span>
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modal-1">Send</button>
+                                            <button class="btn btn-link link-with-arrow collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">View info</button>
+                                        </div>
+                                    </div>
+                                    <div class="card-content collapse" id="collapse-6" aria-labelledby="heading-6">
+                                        <div class="card-body">
+                                            <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                            <ul>
+                                                <li>Templates1111</li>
+                                                <li>Calculatd fields</li>
+                                                <li>etc.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="section-card">
+                                    <div class="card-header">
+                                        <div class="card-info">
+                                            <div class="card-icon">
+                                                <img src="assets/img/icon-7.svg" alt="icon">
+                                            </div>
+                                            <span class="card-description">I-9 verification request</span>
+                                        </div>
+                                        <div class="card-actions">
+                                            <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#modal-2">Send</button>
+                                            <button class="btn btn-link link-with-arrow collapsed" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="false" aria-controls="collapse-7">View info</button>
+                                        </div>
+                                    </div>
+                                    <div class="card-content collapse" id="collapse-7" aria-labelledby="heading-7">
+                                        <div class="card-body">
+                                            <span class="card-body-title">This action demonstrates the following Docusign API functions:</span>
+                                            <ul>
+                                                <li>Templates1111</li>
+                                                <li>Calculatd fields</li>
+                                                <li>etc.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo" class="footer bg-white pt-3 pb-3 text-center">
+        <div class="container">
+            <span class="copyright">© 2024 Docusign Inc.</span>
+        </div>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-1" tabindex="-1" role="dialog" aria-labelledby="modalLabel-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="modalLabel-1">Add recipient</h4>
+                    <span class="modal-subtitle">Enter the name and email address<br>
+                        of the person you want to eSign the document. </span>
+
+                    <form action="" class="was-validated">
+                        <div class="form-group">
+                            <label for="fullname">Full name</label>
+                            <input type="text" class="form-control" id="fullname" placeholder="" name="fullname" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="" name="email" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="buttons-group d-flex flex-wrap justify-content-end pt-3">
+                            <button class="btn btn-warning btn-sm">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-2" tabindex="-1" role="dialog" aria-labelledby="modalLabel-2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="modal-body">
+                    <h4 class="modal-title" id="modalLabel-2">Add recipient</h4>
+                    <span class="modal-subtitle">Enter the name and email addresses<br>
+                        of the person you want to eSign the document. </span>
+
+                    <form action="" class="was-validated">
+                        <div class="form-group">
+                            <label for="fullname-2">Full name</label>
+                            <input type="text" class="form-control" id="fullname-2" placeholder="" name="fullname-2" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email-2">E-mail</label>
+                            <input type="email" class="form-control" id="email-2" placeholder="" name="email-2" required>
+                            <div class="valid-feedback">Valid.</div>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="buttons-group d-flex flex-wrap justify-content-end pt-3">
+                            <button class="btn btn-warning btn-sm disabled">Continue</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

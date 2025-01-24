@@ -1,0 +1,36 @@
+.info-section {
+    background-size: 250px;
+    background-repeat: no-repeat;
+    background-position: 100% 240px;
+    padding-top: 55px;
+    padding-bottom: 80px;
+    background-color: $gray-100;
+    @include media-breakpoint-up(md) {
+        padding-top: 75px;
+        background-size: 480px;
+        background-position: 100% 100px;
+    }
+    @include media-breakpoint-up(lg) {
+        background-size: 650px;
+        background-position: 100% -35px;
+    }
+
+    .container-fluid {
+        position: relative;
+    }
+
+    h3 {
+        margin-bottom: 12px;
+    }
+
+    .buttons-group {
+        @include media-breakpoint-up(lg) {
+            padding-top: 25px;
+        }
+    }
+
+    .absolute-img {
+        top: -75px;
+        left: -150px;
+    }
+}

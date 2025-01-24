@@ -1,0 +1,49 @@
+<section class="hero-section hero-home">
+  <div class="container-fluid">
+    <div class="img-holder absolute-img">
+      <img src="assets/img/hero-absolute-image.png" alt="dots" />
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="hero-info">
+          <h1 translate>WelcomeHeader</h1>
+          <h4 translate>WelcomeDescription</h4>
+          <div
+            class="buttons-group d-flex flex-column flex-xl-row justify-content-center justify-content-md-start align-items-center align-items-md-start">
+            <a class="btn btn-warning btn-lg" [href]="'Account/Login?authType=' + authType.CodeGrant"
+              (click)="login(authType.CodeGrant)" translate>
+              LoginWithDocuSignAccountButton
+            </a>
+            <a class="btn btn-white btn-lg" [href]="'Account/Login?authType=' + authType.JWT"
+              (click)="login(authType.JWT)" translate>
+              LoginWithTestAccountButton
+            </a>
+          </div>
+          <div class="cta-section">
+            <span class="cta-title" translate>Note</span>
+            <div class="cta-row">
+              <div class="img-holder">
+                <img src="assets/img/download.svg" alt="download icon" />
+              </div>
+              <a href="https://marketplace.visualstudio.com/items?itemName=DocuSign.DocuSignVSExtension" target="blank"
+                translate>VSExtentionLink</a>
+            </div>
+            <div class="cta-row">
+              <div class="img-holder">
+                <img src="assets/img/download.svg" alt="download icon" />
+              </div>
+              <a href="https://marketplace.visualstudio.com/items?itemName=DocuSign.docusign-vscode-extension"
+                target="blank" translate>VSCodeExtentionLink</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="main-image">
+          <img src="assets/img/hero.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-info></app-info>

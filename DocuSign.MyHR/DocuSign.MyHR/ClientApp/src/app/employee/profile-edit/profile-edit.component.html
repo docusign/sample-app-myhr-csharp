@@ -1,0 +1,181 @@
+<div>
+    <h4 translate>Profile.Header</h4>
+    <div class="user-profile">
+        <div class="editable">
+            <form
+                id="profileForm"
+                action=""
+                class="was-validated"
+                #profileForm="ngForm"
+                (ngSubmit)="profileForm.form.valid && saveUser(profileForm.value)"
+            >
+                <div class="user-avatar">
+                    <div class="user-image" *ngIf="user?.profileImage">
+                        <img ng-bind="safe" src="{{ 'data:image/jpg;base64,' + user.profileImage }}" alt="avatar" />
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label for="uname" translate>Profile.Edit.FirstName</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="uname"
+                                placeholder=""
+                                [ngModel]="user.firstName"
+                                #firstName="ngModel"
+                                name="firstName"
+                                pattern="(.|\s)*\S(.|\s)*"
+                                required
+                            />
+                            <div *ngIf="firstName.invalid" class="invalid-feedback">
+                                <div *ngIf="firstName.errors.required || firstName.errors.pattern" translate>
+                                    Profile.Edit.FieldInvalid
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lname" translate>Profile.Edit.LastName</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="lname"
+                                placeholder=""
+                                [ngModel]="user.lastName"
+                                name="lastName"
+                                #lastName="ngModel"
+                                pattern="(.|\s)*\S(.|\s)*"
+                                required
+                            />
+                            <div *ngIf="lastName.invalid" class="invalid-feedback">
+                                <div *ngIf="lastName.errors.required || lastName.errors.pattern" translate>
+                                    Profile.Edit.FieldInvalid
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-row row">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="profile-title col-lg-2" translate>
+                                Profile.Edit.Id
+                            </div>
+                            <div class="profile-description col-lg-10" ng-bind="safe">
+                                {{ user.profileId }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="profile-title col-lg-4" translate>
+                                Profile.Edit.HireDate
+                            </div>
+                            <div class="profile-description col-lg-8" ng-bind="safe">
+                                {{ user?.hireDate | date: 'shortDate' }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div ngModelGroup="address" #nameCtrl="ngModelGroup">
+                    <div class="form-group">
+                        <label for="address" translate>Profile.Edit.AddressLine</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            placeholder=""
+                            name="address1"
+                            [ngModel]="user.address.address1"
+                            #address1="ngModel"
+                            pattern="(.|\s)*\S(.|\s)*"
+                            required
+                        />
+                        <div *ngIf="address1.invalid" class="invalid-feedback">
+                            <div *ngIf="address1.errors.required || address1.errors.pattern" translate>
+                                Profile.Edit.FieldInvalid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="city" translate>Profile.Edit.City</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            placeholder=""
+                            name="city"
+                            [ngModel]="user.address.city"
+                            #city="ngModel"
+                            pattern="(.|\s)*\S(.|\s)*"
+                            required
+                        />
+                        <div *ngIf="city.invalid" class="invalid-feedback">
+                            <div *ngIf="city.errors.required || city.errors.pattern" translate>
+                                Profile.Edit.FieldInvalid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="state" translate>Profile.Edit.State</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="state"
+                            placeholder=""
+                            name="stateOrProvince"
+                            [ngModel]="user.address.stateOrProvince"
+                            #stateOrProvince="ngModel"
+                            pattern="(.|\s)*\S(.|\s)*"
+                            required
+                        />
+                        <div *ngIf="stateOrProvince.invalid" class="invalid-feedback">
+                            <div *ngIf="stateOrProvince.errors.required || stateOrProvince.errors.pattern" translate>
+                                Profile.Edit.FieldInvalid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode" translate>Profile.Edit.ZipCode</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="zipcode"
+                            placeholder=""
+                            name="postalCode"
+                            [ngModel]="user.address.postalCode"
+                            #postalCode="ngModel"
+                            pattern="(.|\s)*\S(.|\s)*"
+                            required
+                        />
+                        <div *ngIf="profileForm.submitted && postalCode.invalid" class="invalid-feedback">
+                            <div *ngIf="postalCode.errors.required || postalCode.errors.pattern" translate>
+                                Profile.Edit.FieldInvalid
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country" translate>Profile.Edit.Country</label>
+                        <select class="form-control" id="country" name="country" [(ngModel)]="user.address.country">
+                            <option *ngFor="let country of countries" [value]="country.value" ng-bind="safe">{{ country.value }}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="buttons-group d-flex flex-wrap justify-content-end mt-1">
+                    <button id="cancelButton" class="btn btn-outline-warning btn-sm" type="button" (click)="cancel()" translate>
+                        Profile.Edit.Cancel
+                    </button>
+                    <button
+                        id="saveButton"
+                        [class.disabled]="profileForm.invalid"
+                        [disabled]="profileForm.invalid"
+                        class="btn btn-warning btn-sm"
+                        type="submit"
+                        translate
+                    >
+                        Profile.Edit.Save
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div> 

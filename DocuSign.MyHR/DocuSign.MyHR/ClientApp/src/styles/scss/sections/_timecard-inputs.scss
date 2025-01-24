@@ -1,0 +1,76 @@
+.timecard-inputs {
+    position: relative;
+    @include media-breakpoint-up(md) {
+        display: flex;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        @include media-breakpoint-up(md) {
+            display: block;
+            max-width: 83px;
+            margin-bottom: 0;
+            margin-right: 18px;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &.weekend {
+            .form-control {
+                background-color: #FCF1ED;
+                border-color: #FCF1ED;
+            }
+        }
+
+        .form-control {
+            max-width: 115px;
+            @include media-breakpoint-up(md) {
+                max-width: 83px;
+            }
+        }
+
+        label {
+            color: #3C3C3D;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 22px;
+            margin-bottom: 0;
+            min-width: 55px;
+            @include media-breakpoint-up(md) {
+                margin-bottom: 7px;
+            }
+        }
+    }
+    .timecard-feedback {
+        transition: 3s;
+        font-size: 14px;
+        letter-spacing: 0;
+        line-height: 19px;
+        color: #cd0000;
+        opacity: 0;
+
+        @include media-breakpoint-up(md) {
+
+            position: absolute;
+            left: 0;
+            right: 18px;
+            top: calc(100% + 5px);
+            text-align: right;
+        }
+    }
+
+}
+.timecard-form {
+    &.needs-validation {
+        &.was-validated {
+            .timecard-feedback {
+                opacity: 1;
+            }
+        }
+    }
+}

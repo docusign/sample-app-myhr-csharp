@@ -1,0 +1,42 @@
+.user-avatar {
+    margin-bottom: 20px;
+    @include media-breakpoint-up(lg) {
+        margin-bottom: 30px;
+        display: flex;
+        //flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .user-image {
+        min-width: 150px;
+        max-width: 150px;
+        height: 150px;
+        border-radius: 13px;
+        box-shadow: 0 3px 46px -11px rgba(167, 167, 226, 0.42);
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+
+        img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .user-info {
+        color: #1E1E2A;
+        font-size: 23px;
+        font-weight: $font-weight-bold;
+        letter-spacing: 0;
+        line-height: 31px;
+
+        span {
+            display: block;
+        }
+    }
+}

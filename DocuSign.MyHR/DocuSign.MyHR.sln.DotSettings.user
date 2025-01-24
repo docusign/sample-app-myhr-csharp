@@ -1,0 +1,36 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=393c4b73_002Df95a_002D4a6c_002Daae0_002Ddfcf619b24d5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateEnvelope_ReturnsCorrectResult_W4" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.EnvelopeServiceTests.CreateEnvelope_ReturnsCorrectResult_W4&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=39613f69_002D67e3_002D44f1_002D8860_002D2cbd57555d02/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CreateEnvelope_ReturnsCorrectResult_W4 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.EnvelopeServiceTests&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=8b2a130e_002Da703_002D44bb_002Db39a_002Df11854eb8092/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetAuthorizationUrl_ReturnsCorrectUrl" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserServiceTests.GetAuthorizationUrl_ReturnsCorrectUrl&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b19ddc1f_002Dba05_002D4d92_002D8e6c_002D28ee4ed910a9/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="GetUserDetails_ReturnsCorrectResult" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;And&gt;&#xD;
+      &lt;TestAncestor&gt;&#xD;
+        &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserControllerTests.GetUserDetails_ReturnsCorrectResult&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserServiceTests.GetUserDetails_ReturnsCorrectResult&lt;/TestId&gt;&#xD;
+        &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserControllerTests&lt;/TestId&gt;&#xD;
+      &lt;/TestAncestor&gt;&#xD;
+      &lt;Not&gt;&#xD;
+        &lt;TestAncestor&gt;&#xD;
+          &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserControllerTests&lt;/TestId&gt;&#xD;
+        &lt;/TestAncestor&gt;&#xD;
+      &lt;/Not&gt;&#xD;
+    &lt;/And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserControllerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::687C5CB6-1B18-4EA4-844C-6CFEB301124B::.NETCoreApp,Version=v3.1::DocuSign.MyHR.UnitTests.UserServiceTests.UpdateUserDetails_ReturnsCorrectResult&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

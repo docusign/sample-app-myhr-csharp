@@ -1,0 +1,134 @@
+.btn {
+    font-weight: $font-weight-bold;
+
+    &:not(.btn-link) {
+        min-width: 144px;
+        box-shadow: $btn-box-shadow;
+
+        &.btn-sm {
+            min-width: 90px;
+            font-weight: $font-weight-600;
+        }
+
+        &.btn-lg {
+            letter-spacing: 0;
+            min-width: 280px;
+            @include media-breakpoint-up(md) {
+                min-width: 290px;
+            }
+        }
+    }
+
+    &:not(.btn-sm):not(.btn-lg):not(.btn-link) {
+        letter-spacing: 0.7px;
+        min-width: 140px;
+        text-transform: uppercase;
+    }
+
+    &:not(.disabled) {
+
+        &.btn-white {
+            background-color: $white;
+            color: $warning;
+
+            &:hover,
+            &:active,
+            &:focus {
+                color: $warning;
+                background-color: $white;
+            }
+        }
+
+        &.btn-outline-warning {
+            &:hover,
+            &:active,
+            &:focus {
+                color: $warning;
+                background-color: $white;
+            }
+
+        }
+
+        &.btn-warning {
+            color: $white;
+
+            &:hover,
+            &:active,
+            &:focus {
+
+            }
+        }
+    }
+
+    &.disabled {
+        cursor: default;
+        box-shadow: none;
+
+        &.btn-white {
+            color: $gray-600;
+            border-color: $gray-600;
+        }
+
+        &.btn-outline-warning {
+            color: $gray-600;
+            border-color: $gray-600;
+        }
+
+        &.btn-warning {
+            color: $white;
+            background-color: $gray-600;
+            border-color: $gray-600;
+        }
+
+    }
+
+    &.btn-link {
+        padding: 0;
+    }
+
+    //&:not(.btn-warning):not(.btn-outline-warning) {
+    //    color: $orange;
+    //    &:hover,
+    //    &:active,
+    //    &:focus {
+    //        color: $white;
+    //        background-color: $orange;
+    //        background-color: red!important;
+    //    }
+    //}
+
+
+}
+
+
+.buttons-group {
+    .btn {
+        &:not(:last-child) {
+            &:not(.btn-sm):not(.btn-lg) {
+                margin-right: 9px;
+                //margin-bottom: 10px;
+                @include media-breakpoint-up(lg) {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    .btn-sm {
+        &:not(:last-child) {
+            @include media-breakpoint-up(lg) {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .btn-lg {
+        &:not(:last-child) {
+            margin-bottom: 25px;
+            @include media-breakpoint-up(xl) {
+                margin-right: 15px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

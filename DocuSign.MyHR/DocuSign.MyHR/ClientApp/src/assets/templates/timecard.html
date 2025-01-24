@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Docusign</title>
+    <meta name="description"
+          content="">
+    <meta name="keywords"
+          content="">
+    <link rel="stylesheet" href="assets/css/main.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header" role="banner">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-lg-end">
+                <a class="navbar-brand d-inline-flex align-items-center p-0" href="#">
+                            <span class="navbar-brand-image d-inline-block">
+                                <img src="assets/img/logo.svg" alt="">
+                            </span>
+                    MyHR
+                </a>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-md-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Log Out</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">GitHub Source
+                                <img class="icon" src="assets/img/arrow-right.svg" alt="arrow-right icon"></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main role="main" class="content">
+        <section class="container content-section">
+
+            <div class="img-holder timecard-absolute-image-one absolute-img">
+                <img src="assets/img/timecard-absolute-image-1.png" alt="dots" />
+            </div>
+            <div class="img-holder timecard-absolute-image-two absolute-img">
+                <img src="assets/img/timecard-absolute-image-2.png" alt="dots" />
+            </div>
+            <h2 class="page-title">Timecard</h2>
+            <div class="row">
+                <div class="col-lg-9">
+                    <h4>Fill in the hours worked each day for Week 20 (May, 17 - May, 24)</h4>
+                    <div class="user-profile timecard">
+                        <div class="editable">
+                            <div class="user-avatar">
+                                <div class="user-image">
+                                    <img src="assets/img/avatar.png" alt="avatar">
+                                </div>
+                                <div class="user-info">
+                                    <span>Kevin</span>
+                                    <span>Dukkonovsky </span>
+                                </div>
+                            </div>
+                            <form action="" class="was-validated">
+                                <div class="timecard-inputs">
+                                    <div class="form-group">
+                                        <label for="Mon">Mon</label>
+                                        <input type="number" class="form-control" id="Mon" placeholder="" name="Mon" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Tue">Tue</label>
+                                        <input type="number" class="form-control" id="Tue" placeholder="" name="Tue" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Wed">Wed</label>
+                                        <input type="number" class="form-control" id="Wed" placeholder="" name="Wed" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Thu">Thu</label>
+                                        <input type="number" class="form-control" id="Thu" placeholder="" name="Thu" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Fri">Fri</label>
+                                        <input type="number" class="form-control" id="Fri" placeholder="" name="Fri" required>
+                                    </div>
+                                    <div class="form-group weekend">
+                                        <label for="Sat">Sat</label>
+                                        <input type="number" class="form-control" id="Sat" placeholder="" name="Sat" required>
+                                    </div>
+                                    <div class="form-group weekend">
+                                        <label for="Sun">Sun</label>
+                                        <input type="number" class="form-control" id="Sun" placeholder="" name="Sun" required>
+                                    </div>
+                                </div>
+                                <div class="total-time text-md-right mt-4">
+                                    <span class="total-time-title">Total</span>
+                                    <span class="total-time-hours">20.5 h</span>
+                                </div>
+                                <hr>
+                                <div class="d-flex flex-wrap justify-content-center justify-content-md-end align-items-center">
+                                    <h6 class="mb-md-0 mr-md-3 text-center text-lg-left">I affirm I worked 20.5 hours this period</h6>
+                                    <button class="btn btn-warning ">Submit time report</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer role="contentinfo" class="footer bg-white pt-3 pb-3 text-center">
+        <div class="container">
+            <span class="copyright">© 2024 Docusign Inc.</span>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
