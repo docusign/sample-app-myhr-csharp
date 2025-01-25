@@ -1,9 +1,9 @@
-# MyHR: Docusign Sample Application
+# The Docusign HR Sample Application
 
 ## Introduction
-MyHR is a Docusign sample application demonstrating how the Docusign APIs can be used to construct applications for human resources. MyHR is written in C# using ASP.Net Core 3.1 (server) and Angular 9 (client). You can find a live instance running at [https://myhr.sampleapps.docusign.com/](https://myhr.sampleapps.docusign.com/).
+The HR Sample Application is a Docusign sample application demonstrating how the Docusign APIs can be used to construct applications for human resources. MyHR is written in C# using ASP.Net Core 3.1 (server) and Angular 9 (client). You can find a live instance running at [https://hr.sampleapps.docusign.com/](https://hr.sampleapps.docusign.com/).
 
-MyHR demonstrates the following:
+The HR Sample Application demonstrates the following:
 1. Authentication with two different methods
     * [Authentication Code Grant](https://developers.docusign.com/platform/auth/authcode/)
     * [JSON Web Token (JWT) Grant](https://developers.docusign.com/platform/auth/jwt/)
@@ -47,7 +47,7 @@ The examples with templates were created using these Docusign APIs and features:
 4. Navigate to that folder: **cd sample-app-myhr-csharp**
 5. Install client-side dependencies using the npm package manager: **npm install**
 
-## Running MyHR
+## Running The HR Sample App
 **Manual**
 1. Navigate to **DocuSign.MyHR/DocuSign.MyHR/ClientApp** folder and run **npm start** command.
 1. Build and then start the solution.
