@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run lint && echo Starting && ng serve",
-    "build": "npm run lint && ng build",
+    "start": "echo Starting && ng serve",
+    "build": "ng build",
     "build:ssr": "ng run DocuSign.MyHR:server:dev",
     "lint": "eslint \"**/*.ts\" --quiet --fix",
     "install-puppeteer": "cd node_modules/puppeteer && npm run install",
